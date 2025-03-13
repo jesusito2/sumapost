@@ -39,13 +39,13 @@ app.post('/sumar',(req,res)=> {
 app.post('/areacuadrado',(req,res)=> {
     const{lado1,lado2} = req.body;
     //validar que se hayan enviado los dos numeros 
-    if(!num1 || !num2) {
+    if(!lado1 || !lado2) {
         return res.status(400).send({error:'Faltan numeros para sumar'});
 
     }
         
             console.log()
-            //sumar los numeros 
+            //multipilicar lado por lado  
             const resultado = lado1 * lado2;
             //enviar el resultado
             res.send({resultado});
